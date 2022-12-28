@@ -1,27 +1,52 @@
-.collapsible {
-  background-color: rgb(112, 111, 206);
-  color: rgb(251, 245, 245);
+* {
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.collapse-container {
+  width: 500px;
+  position: relative;    
+}
+
+.collapse-container a {
+  text-decoration: none;
+  display: inline-block;
+  font-family: sans-serif;
+  color: rgb(149, 149, 149);
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+}
+
+.btn-container {
+  background-color: rgb(255, 255, 255);
+}
+
+.collapsible-btn {
+  background-color: rgb(136, 173, 255);
+  color: white;
   cursor: pointer;
-  padding: 18px;
-  width: 10%;
+  padding: 10px;
   border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  border-radius: 10px;
-
+  border-radius: 10px;    
+  font-size: 20px;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
-  background-color: #ccc;
+.active, .collapsible-btn:hover {
+  background-color: rgb(142, 140, 184);
 }
 
-/* Style the collapsible content. Note: hidden by default */
 .content {
   padding: 0 18px;
-  display: none;
+  max-height: 0;
   overflow: hidden;
-  background-color: #c26464;
-  max-height: 0; 
+  transition: max-height 0.5s ease-in;    
+}
+
+.content p {
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 10px;
 }
