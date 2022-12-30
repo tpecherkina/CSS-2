@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'src'),
   },
   module: {
     rules: [
@@ -45,7 +45,7 @@ module.exports = {
          }),
   ],
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.resolve(__dirname, 'src'),
     compress: true,
     port: 9000,
     watchContentBase: true,
